@@ -43,6 +43,7 @@
     _appSoundPlayer = nil;
     [self stopBroadcasting];
     _peripheralManager = nil;
+
 }
 
 - (void) startPlaying
