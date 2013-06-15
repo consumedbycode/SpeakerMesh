@@ -102,7 +102,7 @@
 - (void) broadcastWithId
 {
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:*uuid
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                      major:[_speakerId shortValue]
                                                                 identifier:@"com.hackday.speakermesh"];
     NSDictionary *peripheralData = [region peripheralDataWithMeasuredPower:@-59];
