@@ -8,6 +8,7 @@
 
 #import "SPMSpeakerViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "Constants.h"
 
 @interface SPMSpeakerViewController()
 
@@ -100,7 +101,8 @@
 
 - (void) broadcastWithId
 {
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID]
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:*uuid
                                                                      major:[_speakerId shortValue]
                                                                 identifier:@"com.hackday.speakermesh"];
     NSDictionary *peripheralData = [region peripheralDataWithMeasuredPower:@-59];

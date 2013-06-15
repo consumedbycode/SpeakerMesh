@@ -1,519 +1,1317 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		AB61AEBC176CD3DD00C7306E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBB176CD3DD00C7306E /* Foundation.framework */; };
-		AB61AEBE176CD3DD00C7306E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBD176CD3DD00C7306E /* CoreGraphics.framework */; };
-		AB61AEC0176CD3DD00C7306E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBF176CD3DD00C7306E /* UIKit.framework */; };
-		AB61AEC6176CD3DD00C7306E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB61AEC4176CD3DD00C7306E /* InfoPlist.strings */; };
-		AB61AEC8176CD3DD00C7306E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEC7176CD3DD00C7306E /* main.m */; };
-		AB61AECC176CD3DD00C7306E /* SPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */; };
-		AB61AECF176CD3DD00C7306E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61AECD176CD3DD00C7306E /* Main.storyboard */; };
-		AB61AED2176CD3DD00C7306E /* SPMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */; };
-		AB61AED4176CD3DD00C7306E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB61AED3176CD3DD00C7306E /* Images.xcassets */; };
-		AB61AEDB176CD3DD00C7306E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEDA176CD3DD00C7306E /* XCTest.framework */; };
-		AB61AEDC176CD3DD00C7306E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBB176CD3DD00C7306E /* Foundation.framework */; };
-		AB61AEDD176CD3DD00C7306E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBF176CD3DD00C7306E /* UIKit.framework */; };
-		AB61AEE5176CD3DD00C7306E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB61AEE3176CD3DD00C7306E /* InfoPlist.strings */; };
-		AB61AEE7176CD3DD00C7306E /* SpeakerMeshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */; };
-		AB61AEF4176CDD2400C7306E /* SPMSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */; };
-		AB61AEF5176CDD3D00C7306E /* SPMClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */; };
-		AB61AEF7176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */; };
-		AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEF8176CDE9700C7306E /* CoreAudio.framework */; };
-		AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */; };
-		AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */; };
-		AB61AF00176CE2F200C7306E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */; };
-		AB61AF01176CE2F200C7306E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFF176CE2F200C7306E /* CoreLocation.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AB61AEDE176CD3DD00C7306E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB61AEB0176CD3DD00C7306E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AB61AEB7176CD3DD00C7306E;
-			remoteInfo = SpeakerMesh;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		AB61AEB8176CD3DD00C7306E /* SpeakerMesh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeakerMesh.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB61AEBB176CD3DD00C7306E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AB61AEBD176CD3DD00C7306E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AB61AEBF176CD3DD00C7306E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		AB61AEC3176CD3DD00C7306E /* SpeakerMesh-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeakerMesh-Info.plist"; sourceTree = "<group>"; };
-		AB61AEC5176CD3DD00C7306E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AB61AEC7176CD3DD00C7306E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AB61AEC9176CD3DD00C7306E /* SpeakerMesh-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpeakerMesh-Prefix.pch"; sourceTree = "<group>"; };
-		AB61AECA176CD3DD00C7306E /* SPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMAppDelegate.h; sourceTree = "<group>"; };
-		AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMAppDelegate.m; sourceTree = "<group>"; };
-		AB61AECE176CD3DD00C7306E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB61AED0176CD3DD00C7306E /* SPMMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMMainViewController.h; sourceTree = "<group>"; };
-		AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMMainViewController.m; sourceTree = "<group>"; };
-		AB61AED3176CD3DD00C7306E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AB61AED9176CD3DD00C7306E /* SpeakerMeshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakerMeshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB61AEDA176CD3DD00C7306E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AB61AEE2176CD3DD00C7306E /* SpeakerMeshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeakerMeshTests-Info.plist"; sourceTree = "<group>"; };
-		AB61AEE4176CD3DD00C7306E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakerMeshTests.m; sourceTree = "<group>"; };
-		AB61AEF0176CDB5700C7306E /* SPMClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMClientViewController.h; sourceTree = "<group>"; };
-		AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMClientViewController.m; sourceTree = "<group>"; };
-		AB61AEF2176CDB7B00C7306E /* SPMSpeakerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMSpeakerViewController.h; sourceTree = "<group>"; };
-		AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMSpeakerViewController.m; sourceTree = "<group>"; };
-		AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04 - Johnny Cash - Folsom Prison Blues [Live].mp3"; sourceTree = "<group>"; };
-		AB61AEF8176CDE9700C7306E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		AB61AEFF176CE2F200C7306E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		AB61AF02176CF1B600C7306E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		AB61AF16176CF4E400C7306E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		AB61AEB5176CD3DD00C7306E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AF00176CE2F200C7306E /* CoreBluetooth.framework in Frameworks */,
-				AB61AF01176CE2F200C7306E /* CoreLocation.framework in Frameworks */,
-				AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */,
-				AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */,
-				AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */,
-				AB61AEBE176CD3DD00C7306E /* CoreGraphics.framework in Frameworks */,
-				AB61AEC0176CD3DD00C7306E /* UIKit.framework in Frameworks */,
-				AB61AEBC176CD3DD00C7306E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB61AED6176CD3DD00C7306E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AEDB176CD3DD00C7306E /* XCTest.framework in Frameworks */,
-				AB61AEDD176CD3DD00C7306E /* UIKit.framework in Frameworks */,
-				AB61AEDC176CD3DD00C7306E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		AB61AEAF176CD3DD00C7306E = {
-			isa = PBXGroup;
-			children = (
-				AB61AEC1176CD3DD00C7306E /* SpeakerMesh */,
-				AB61AEE0176CD3DD00C7306E /* SpeakerMeshTests */,
-				AB61AEBA176CD3DD00C7306E /* Frameworks */,
-				AB61AEB9176CD3DD00C7306E /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		AB61AEB9176CD3DD00C7306E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AEB8176CD3DD00C7306E /* SpeakerMesh.app */,
-				AB61AED9176CD3DD00C7306E /* SpeakerMeshTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB61AEBA176CD3DD00C7306E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */,
-				AB61AEFF176CE2F200C7306E /* CoreLocation.framework */,
-				AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */,
-				AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */,
-				AB61AEF8176CDE9700C7306E /* CoreAudio.framework */,
-				AB61AEBB176CD3DD00C7306E /* Foundation.framework */,
-				AB61AEBD176CD3DD00C7306E /* CoreGraphics.framework */,
-				AB61AEBF176CD3DD00C7306E /* UIKit.framework */,
-				AB61AEDA176CD3DD00C7306E /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AB61AEC1176CD3DD00C7306E /* SpeakerMesh */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AF16176CF4E400C7306E /* Constants.h */,
-				AB61AECA176CD3DD00C7306E /* SPMAppDelegate.h */,
-				AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */,
-				AB61AECD176CD3DD00C7306E /* Main.storyboard */,
-				AB61AED0176CD3DD00C7306E /* SPMMainViewController.h */,
-				AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */,
-				AB61AEF2176CDB7B00C7306E /* SPMSpeakerViewController.h */,
-				AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */,
-				AB61AED3176CD3DD00C7306E /* Images.xcassets */,
-				AB61AEC2176CD3DD00C7306E /* Supporting Files */,
-				AB61AEF0176CDB5700C7306E /* SPMClientViewController.h */,
-				AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */,
-				AB61AF02176CF1B600C7306E /* Constants.h */,
-			);
-			path = SpeakerMesh;
-			sourceTree = "<group>";
-		};
-		AB61AEC2176CD3DD00C7306E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */,
-				AB61AEC3176CD3DD00C7306E /* SpeakerMesh-Info.plist */,
-				AB61AEC4176CD3DD00C7306E /* InfoPlist.strings */,
-				AB61AEC7176CD3DD00C7306E /* main.m */,
-				AB61AEC9176CD3DD00C7306E /* SpeakerMesh-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AB61AEE0176CD3DD00C7306E /* SpeakerMeshTests */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */,
-				AB61AEE1176CD3DD00C7306E /* Supporting Files */,
-			);
-			path = SpeakerMeshTests;
-			sourceTree = "<group>";
-		};
-		AB61AEE1176CD3DD00C7306E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AB61AEE2176CD3DD00C7306E /* SpeakerMeshTests-Info.plist */,
-				AB61AEE3176CD3DD00C7306E /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		AB61AEB7176CD3DD00C7306E /* SpeakerMesh */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB61AEEA176CD3DD00C7306E /* Build configuration list for PBXNativeTarget "SpeakerMesh" */;
-			buildPhases = (
-				AB61AEB4176CD3DD00C7306E /* Sources */,
-				AB61AEB5176CD3DD00C7306E /* Frameworks */,
-				AB61AEB6176CD3DD00C7306E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SpeakerMesh;
-			productName = SpeakerMesh;
-			productReference = AB61AEB8176CD3DD00C7306E /* SpeakerMesh.app */;
-			productType = "com.apple.product-type.application";
-		};
-		AB61AED8176CD3DD00C7306E /* SpeakerMeshTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AB61AEED176CD3DD00C7306E /* Build configuration list for PBXNativeTarget "SpeakerMeshTests" */;
-			buildPhases = (
-				AB61AED5176CD3DD00C7306E /* Sources */,
-				AB61AED6176CD3DD00C7306E /* Frameworks */,
-				AB61AED7176CD3DD00C7306E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AB61AEDF176CD3DD00C7306E /* PBXTargetDependency */,
-			);
-			name = SpeakerMeshTests;
-			productName = SpeakerMeshTests;
-			productReference = AB61AED9176CD3DD00C7306E /* SpeakerMeshTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		AB61AEB0176CD3DD00C7306E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = SPM;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = HackDayTeamAwesome;
-				TargetAttributes = {
-					AB61AEB7176CD3DD00C7306E = {
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-						};
-					};
-					AB61AED8176CD3DD00C7306E = {
-						TestTargetID = AB61AEB7176CD3DD00C7306E;
-					};
-				};
-			};
-			buildConfigurationList = AB61AEB3176CD3DD00C7306E /* Build configuration list for PBXProject "SpeakerMesh" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = AB61AEAF176CD3DD00C7306E;
-			productRefGroup = AB61AEB9176CD3DD00C7306E /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				AB61AEB7176CD3DD00C7306E /* SpeakerMesh */,
-				AB61AED8176CD3DD00C7306E /* SpeakerMeshTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		AB61AEB6176CD3DD00C7306E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AEF7176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 in Resources */,
-				AB61AED4176CD3DD00C7306E /* Images.xcassets in Resources */,
-				AB61AEC6176CD3DD00C7306E /* InfoPlist.strings in Resources */,
-				AB61AECF176CD3DD00C7306E /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB61AED7176CD3DD00C7306E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AEE5176CD3DD00C7306E /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		AB61AEB4176CD3DD00C7306E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AED2176CD3DD00C7306E /* SPMMainViewController.m in Sources */,
-				AB61AEC8176CD3DD00C7306E /* main.m in Sources */,
-				AB61AECC176CD3DD00C7306E /* SPMAppDelegate.m in Sources */,
-				AB61AEF5176CDD3D00C7306E /* SPMClientViewController.m in Sources */,
-				AB61AEF4176CDD2400C7306E /* SPMSpeakerViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AB61AED5176CD3DD00C7306E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB61AEE7176CD3DD00C7306E /* SpeakerMeshTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AB61AEDF176CD3DD00C7306E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AB61AEB7176CD3DD00C7306E /* SpeakerMesh */;
-			targetProxy = AB61AEDE176CD3DD00C7306E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AB61AEC4176CD3DD00C7306E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB61AEC5176CD3DD00C7306E /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AB61AECD176CD3DD00C7306E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB61AECE176CD3DD00C7306E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AB61AEE3176CD3DD00C7306E /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AB61AEE4176CD3DD00C7306E /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		AB61AEE8176CD3DD00C7306E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		AB61AEE9176CD3DD00C7306E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		AB61AEEB176CD3DD00C7306E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpeakerMesh/SpeakerMesh-Prefix.pch";
-				INFOPLIST_FILE = "SpeakerMesh/SpeakerMesh-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		AB61AEEC176CD3DD00C7306E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpeakerMesh/SpeakerMesh-Prefix.pch";
-				INFOPLIST_FILE = "SpeakerMesh/SpeakerMesh-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		AB61AEEE176CD3DD00C7306E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeakerMesh.app/SpeakerMesh";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpeakerMesh/SpeakerMesh-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SpeakerMeshTests/SpeakerMeshTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		AB61AEEF176CD3DD00C7306E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpeakerMesh.app/SpeakerMesh";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SpeakerMesh/SpeakerMesh-Prefix.pch";
-				INFOPLIST_FILE = "SpeakerMeshTests/SpeakerMeshTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		AB61AEB3176CD3DD00C7306E /* Build configuration list for PBXProject "SpeakerMesh" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB61AEE8176CD3DD00C7306E /* Debug */,
-				AB61AEE9176CD3DD00C7306E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB61AEEA176CD3DD00C7306E /* Build configuration list for PBXNativeTarget "SpeakerMesh" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB61AEEB176CD3DD00C7306E /* Debug */,
-				AB61AEEC176CD3DD00C7306E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AB61AEED176CD3DD00C7306E /* Build configuration list for PBXNativeTarget "SpeakerMeshTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB61AEEE176CD3DD00C7306E /* Debug */,
-				AB61AEEF176CD3DD00C7306E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = AB61AEB0176CD3DD00C7306E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1436E3BD27124B7CB6A047AF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>6DF08D02E5EA47CD92FD2264</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AB61AEAF176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEC1176CD3DD00C7306E</string>
+				<string>AB61AEE0176CD3DD00C7306E</string>
+				<string>AB61AEBA176CD3DD00C7306E</string>
+				<string>AB61AEB9176CD3DD00C7306E</string>
+				<string>D9D0A49481A84322B3D0DFBF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEB0176CD3DD00C7306E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>SPM</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>HackDayTeamAwesome</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>AB61AEB7176CD3DD00C7306E</key>
+					<dict>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.BackgroundModes</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>AB61AED8176CD3DD00C7306E</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>AB61AEB7176CD3DD00C7306E</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>AB61AEB3176CD3DD00C7306E</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>AB61AEAF176CD3DD00C7306E</string>
+			<key>productRefGroup</key>
+			<string>AB61AEB9176CD3DD00C7306E</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>AB61AEB7176CD3DD00C7306E</string>
+				<string>AB61AED8176CD3DD00C7306E</string>
+			</array>
+		</dict>
+		<key>AB61AEB3176CD3DD00C7306E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AB61AEE8176CD3DD00C7306E</string>
+				<string>AB61AEE9176CD3DD00C7306E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AB61AEB4176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AED2176CD3DD00C7306E</string>
+				<string>AB61AEC8176CD3DD00C7306E</string>
+				<string>AB61AECC176CD3DD00C7306E</string>
+				<string>AB61AEF5176CDD3D00C7306E</string>
+				<string>AB61AEF4176CDD2400C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AEB5176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AF00176CE2F200C7306E</string>
+				<string>AB61AF01176CE2F200C7306E</string>
+				<string>AB61AEFD176CDEF500C7306E</string>
+				<string>AB61AEFB176CDE9B00C7306E</string>
+				<string>AB61AEF9176CDE9700C7306E</string>
+				<string>AB61AEBE176CD3DD00C7306E</string>
+				<string>AB61AEC0176CD3DD00C7306E</string>
+				<string>AB61AEBC176CD3DD00C7306E</string>
+				<string>BEF6EAF6EC3F438084896968</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AEB6176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AEF7176CDDFF00C7306E</string>
+				<string>AB61AED4176CD3DD00C7306E</string>
+				<string>AB61AEC6176CD3DD00C7306E</string>
+				<string>AB61AECF176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AEB7176CD3DD00C7306E</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AB61AEEA176CD3DD00C7306E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1436E3BD27124B7CB6A047AF</string>
+				<string>AB61AEB4176CD3DD00C7306E</string>
+				<string>AB61AEB5176CD3DD00C7306E</string>
+				<string>AB61AEB6176CD3DD00C7306E</string>
+				<string>C0C0384BAD0A4A628982F2FA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SpeakerMesh</string>
+			<key>productName</key>
+			<string>SpeakerMesh</string>
+			<key>productReference</key>
+			<string>AB61AEB8176CD3DD00C7306E</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>AB61AEB8176CD3DD00C7306E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SpeakerMesh.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AB61AEB9176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEB8176CD3DD00C7306E</string>
+				<string>AB61AED9176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEBA176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEFE176CE2F200C7306E</string>
+				<string>AB61AEFF176CE2F200C7306E</string>
+				<string>AB61AEFC176CDEF500C7306E</string>
+				<string>AB61AEFA176CDE9B00C7306E</string>
+				<string>AB61AEF8176CDE9700C7306E</string>
+				<string>AB61AEBB176CD3DD00C7306E</string>
+				<string>AB61AEBD176CD3DD00C7306E</string>
+				<string>AB61AEBF176CD3DD00C7306E</string>
+				<string>AB61AEDA176CD3DD00C7306E</string>
+				<string>6DF08D02E5EA47CD92FD2264</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEBB176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEBC176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEBB176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEBD176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEBE176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEBD176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEBF176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEC0176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEBF176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEC1176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AF16176CF4E400C7306E</string>
+				<string>AB61AECA176CD3DD00C7306E</string>
+				<string>AB61AECB176CD3DD00C7306E</string>
+				<string>AB61AECD176CD3DD00C7306E</string>
+				<string>AB61AED0176CD3DD00C7306E</string>
+				<string>AB61AED1176CD3DD00C7306E</string>
+				<string>AB61AEF2176CDB7B00C7306E</string>
+				<string>AB61AEF3176CDB7B00C7306E</string>
+				<string>AB61AED3176CD3DD00C7306E</string>
+				<string>AB61AEC2176CD3DD00C7306E</string>
+				<string>AB61AEF0176CDB5700C7306E</string>
+				<string>AB61AEF1176CDB5700C7306E</string>
+				<string>AB61AF02176CF1B600C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SpeakerMesh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC2176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEF6176CDDFF00C7306E</string>
+				<string>AB61AEC3176CD3DD00C7306E</string>
+				<string>AB61AEC4176CD3DD00C7306E</string>
+				<string>AB61AEC7176CD3DD00C7306E</string>
+				<string>AB61AEC9176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC3176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>SpeakerMesh-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC4176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEC5176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC5176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC6176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEC4176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEC7176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEC8176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEC7176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEC9176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SpeakerMesh-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AECA176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SPMAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AECB176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SPMAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AECC176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AECB176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AECD176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AECE176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AECE176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AECF176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AECD176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AED0176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SPMMainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AED1176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SPMMainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AED2176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AED1176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AED3176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AED4176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AED3176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AED5176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AEE7176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AED6176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AEDB176CD3DD00C7306E</string>
+				<string>AB61AEDD176CD3DD00C7306E</string>
+				<string>AB61AEDC176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AED7176CD3DD00C7306E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AB61AEE5176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AB61AED8176CD3DD00C7306E</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AB61AEED176CD3DD00C7306E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AB61AED5176CD3DD00C7306E</string>
+				<string>AB61AED6176CD3DD00C7306E</string>
+				<string>AB61AED7176CD3DD00C7306E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>AB61AEDF176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SpeakerMeshTests</string>
+			<key>productName</key>
+			<string>SpeakerMeshTests</string>
+			<key>productReference</key>
+			<string>AB61AED9176CD3DD00C7306E</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>AB61AED9176CD3DD00C7306E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SpeakerMeshTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AB61AEDA176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>AB61AEDB176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEDA176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEDC176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEBB176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEDD176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEBF176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEDE176CD3DD00C7306E</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>AB61AEB0176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>AB61AEB7176CD3DD00C7306E</string>
+			<key>remoteInfo</key>
+			<string>SpeakerMesh</string>
+		</dict>
+		<key>AB61AEDF176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>AB61AEB7176CD3DD00C7306E</string>
+			<key>targetProxy</key>
+			<string>AB61AEDE176CD3DD00C7306E</string>
+		</dict>
+		<key>AB61AEE0176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEE6176CD3DD00C7306E</string>
+				<string>AB61AEE1176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SpeakerMeshTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE1176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEE2176CD3DD00C7306E</string>
+				<string>AB61AEE3176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE2176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>SpeakerMeshTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE3176CD3DD00C7306E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AB61AEE4176CD3DD00C7306E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE4176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE5176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEE3176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEE6176CD3DD00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SpeakerMeshTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEE7176CD3DD00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEE6176CD3DD00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEE8176CD3DD00C7306E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AB61AEE9176CD3DD00C7306E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB61AEEA176CD3DD00C7306E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AB61AEEB176CD3DD00C7306E</string>
+				<string>AB61AEEC176CD3DD00C7306E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AB61AEEB176CD3DD00C7306E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D9D0A49481A84322B3D0DFBF</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SpeakerMesh/SpeakerMesh-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SpeakerMesh/SpeakerMesh-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AB61AEEC176CD3DD00C7306E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>D9D0A49481A84322B3D0DFBF</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SpeakerMesh/SpeakerMesh-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SpeakerMesh/SpeakerMesh-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB61AEED176CD3DD00C7306E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AB61AEEE176CD3DD00C7306E</string>
+				<string>AB61AEEF176CD3DD00C7306E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AB61AEEE176CD3DD00C7306E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/SpeakerMesh.app/SpeakerMesh</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SpeakerMesh/SpeakerMesh-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>SpeakerMeshTests/SpeakerMeshTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AB61AEEF176CD3DD00C7306E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/SpeakerMesh.app/SpeakerMesh</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(SYSTEM_APPS_DIR)/Xcode5-DP.app/Contents/Developer/Library/Frameworks</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>SpeakerMesh/SpeakerMesh-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>SpeakerMeshTests/SpeakerMeshTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AB61AEF0176CDB5700C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SPMClientViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEF1176CDB5700C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SPMClientViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEF2176CDB7B00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SPMSpeakerViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEF3176CDB7B00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SPMSpeakerViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEF4176CDD2400C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEF3176CDB7B00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEF5176CDD3D00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEF1176CDB5700C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEF6176CDDFF00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>audio.mp3</string>
+			<key>path</key>
+			<string>04 - Johnny Cash - Folsom Prison Blues [Live].mp3</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AEF7176CDDFF00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEF6176CDDFF00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEF8176CDE9700C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreAudio.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreAudio.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEF9176CDE9700C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEF8176CDE9700C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEFA176CDE9B00C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AVFoundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AVFoundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEFB176CDE9B00C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEFA176CDE9B00C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEFC176CDEF500C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AudioToolbox.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AudioToolbox.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEFD176CDEF500C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEFC176CDEF500C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AEFE176CE2F200C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreBluetooth.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreBluetooth.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AEFF176CE2F200C7306E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreLocation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreLocation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>AB61AF00176CE2F200C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEFE176CE2F200C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AF01176CE2F200C7306E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB61AEFF176CE2F200C7306E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB61AF02176CF1B600C7306E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Constants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB61AF16176CF4E400C7306E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Constants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BEF6EAF6EC3F438084896968</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6DF08D02E5EA47CD92FD2264</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
+		<key>C0C0384BAD0A4A628982F2FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
+		</dict>
+		<key>D9D0A49481A84322B3D0DFBF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>AB61AEB0176CD3DD00C7306E</string>
+</dict>
+</plist>
