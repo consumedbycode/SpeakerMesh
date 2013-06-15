@@ -17,6 +17,7 @@
     CLLocationManager *_locationManager;
     CLBeaconRegion *_beaconRegion;
     UIDynamicAnimator *_animator;
+    BOOL _isPlaying;
 }
 
 - (void)viewDidLoad
@@ -30,12 +31,16 @@
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
 
     _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
+
     UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.statusLabel]];
+    gravityBehavior.yComponent = 3;
+
     UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.statusLabel]];
     collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+
     [_animator addBehavior:gravityBehavior];
     [_animator addBehavior:collisionBehavior];
-    
+
     collisionBehavior.collisionDelegate = self;
 }
 
@@ -46,11 +51,22 @@
     _locationManager = nil;
 }
 
+- (void) collisionBehavior:(UICollisionBehavior *)behavior endedContactForItem:(id<UIDynamicItem>)item withBoundaryIdentifier:(id<NSCopying>)identifier
+{
+    UIPushBehavior *pushBehavior = [[UIPushBehavior alloc]initWithItems:@[self.statusLabel] mode:UIPushBehaviorModeInstantaneous];
+    pushBehavior.yComponent = -.5;
+}
+
 - (void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     for(CLBeacon *beacon in beacons) {
         
     }
+}
+
+- (IBAction)performPlayPause:(id)sender
+{
+    _isPlaying = !_isPlaying;
 }
 
 @end

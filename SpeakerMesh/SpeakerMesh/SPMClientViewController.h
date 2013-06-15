@@ -12,5 +12,7 @@
 @interface SPMClientViewController : UIViewController <CLLocationManagerDelegate, UICollisionBehaviorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
+- (IBAction)performPlayPause:(id)sender;
 
 @end
