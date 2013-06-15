@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SPMSpeakerViewController : UIViewController <AVAudioPlayerDelegate>
+@interface SPMSpeakerViewController : UIViewController <AVAudioPlayerDelegate, CBPeripheralManagerDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *playingStatusLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *broadcastingStatusLabel;
 
 @end

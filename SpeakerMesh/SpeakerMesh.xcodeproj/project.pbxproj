@@ -27,6 +27,8 @@
 		AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEF8176CDE9700C7306E /* CoreAudio.framework */; };
 		AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */; };
 		AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */; };
+		AB61AF00176CE2F200C7306E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */; };
+		AB61AF01176CE2F200C7306E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFF176CE2F200C7306E /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		AB61AEF8176CDE9700C7306E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AB61AEFF176CE2F200C7306E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB61AF00176CE2F200C7306E /* CoreBluetooth.framework in Frameworks */,
+				AB61AF01176CE2F200C7306E /* CoreLocation.framework in Frameworks */,
 				AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */,
 				AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */,
 				AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */,
@@ -118,6 +124,8 @@
 		AB61AEBA176CD3DD00C7306E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */,
+				AB61AEFF176CE2F200C7306E /* CoreLocation.framework */,
 				AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */,
 				AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */,
 				AB61AEF8176CDE9700C7306E /* CoreAudio.framework */,
@@ -490,6 +498,7 @@
 				AB61AEEC176CD3DD00C7306E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB61AEED176CD3DD00C7306E /* Build configuration list for PBXNativeTarget "SpeakerMeshTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +507,7 @@
 				AB61AEEF176CD3DD00C7306E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
