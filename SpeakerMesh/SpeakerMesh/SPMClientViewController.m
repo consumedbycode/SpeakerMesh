@@ -7,31 +7,41 @@
 //
 
 #import "SPMClientViewController.h"
+#import "Constants.h"
 
 @interface SPMClientViewController ()
 
 @end
 
-@implementation SPMClientViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@implementation SPMClientViewController {
+    CLLocationManager *_locationManager;
+    CLBeaconRegion *_beaconRegion;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    self.locatedSpeakersTableView.delegate = self;
+
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:DefaultUUID identifier:[DefaultUUID UUIDString]];
+    [_locationManager startRangingBeaconsInRegion:_beaconRegion];
 }
 
-- (void)didReceiveMemoryWarning
+- (void) viewDidDisappear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [_locationManager stopRangingBeaconsInRegion:_beaconRegion];
+    _beaconRegion = nil;
+    _locationManager = nil;
+}
+
+- (void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"found beacons" message:[NSString stringWithFormat:@"%i beacon(s) found.", beacons.count] delegate:self cancelButtonTitle:@"Sah-weet!" otherButtonTitles:nil];
+    [errorAlert show];
+    return;
+
 }
 
 @end

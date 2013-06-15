@@ -71,6 +71,7 @@
 		AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		AB61AEFE176CE2F200C7306E /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		AB61AEFF176CE2F200C7306E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB61AF02176CF1B600C7306E /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +152,7 @@
 				AB61AEC2176CD3DD00C7306E /* Supporting Files */,
 				AB61AEF0176CDB5700C7306E /* SPMClientViewController.h */,
 				AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */,
+				AB61AF02176CF1B600C7306E /* Constants.h */,
 			);
 			path = SpeakerMesh;
 			sourceTree = "<group>";

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface SPMClientViewController : UIViewController
+@interface SPMClientViewController : UIViewController <CLLocationManagerDelegate, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UITableView *locatedSpeakersTableView;
 
 @end
