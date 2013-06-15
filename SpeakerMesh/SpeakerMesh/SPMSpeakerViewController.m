@@ -7,12 +7,16 @@
 //
 
 #import "SPMSpeakerViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface SPMSpeakerViewController ()
+@interface SPMSpeakerViewController()
 
 @end
 
-@implementation SPMSpeakerViewController
+@implementation SPMSpeakerViewController {
+
+    AVAudioPlayer *_appSoundPlayer;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +30,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"04 - Johnny Cash - Folsom Prison Blues [Live]" ofType:@"mp3"];
+    NSURL *soundFileUrl = [[NSURL alloc] initFileURLWithPath: soundFilePath];
+
+    _appSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileUrl error: nil];
+    [_appSoundPlayer prepareToPlay];
+    [_appSoundPlayer setVolume: 1.0];
+    [_appSoundPlayer setDelegate: self];
+    [_appSoundPlayer play];
 }
 
 - (void)didReceiveMemoryWarning

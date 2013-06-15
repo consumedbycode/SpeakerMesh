@@ -23,6 +23,10 @@
 		AB61AEE7176CD3DD00C7306E /* SpeakerMeshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */; };
 		AB61AEF4176CDD2400C7306E /* SPMSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */; };
 		AB61AEF5176CDD3D00C7306E /* SPMClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */; };
+		AB61AEF7176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */; };
+		AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEF8176CDE9700C7306E /* CoreAudio.framework */; };
+		AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */; };
+		AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMClientViewController.m; sourceTree = "<group>"; };
 		AB61AEF2176CDB7B00C7306E /* SPMSpeakerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMSpeakerViewController.h; sourceTree = "<group>"; };
 		AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMSpeakerViewController.m; sourceTree = "<group>"; };
+		AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "04 - Johnny Cash - Folsom Prison Blues [Live].mp3"; sourceTree = "<group>"; };
+		AB61AEF8176CDE9700C7306E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB61AEFD176CDEF500C7306E /* AudioToolbox.framework in Frameworks */,
+				AB61AEFB176CDE9B00C7306E /* AVFoundation.framework in Frameworks */,
+				AB61AEF9176CDE9700C7306E /* CoreAudio.framework in Frameworks */,
 				AB61AEBE176CD3DD00C7306E /* CoreGraphics.framework in Frameworks */,
 				AB61AEC0176CD3DD00C7306E /* UIKit.framework in Frameworks */,
 				AB61AEBC176CD3DD00C7306E /* Foundation.framework in Frameworks */,
@@ -107,6 +118,9 @@
 		AB61AEBA176CD3DD00C7306E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AB61AEFC176CDEF500C7306E /* AudioToolbox.framework */,
+				AB61AEFA176CDE9B00C7306E /* AVFoundation.framework */,
+				AB61AEF8176CDE9700C7306E /* CoreAudio.framework */,
 				AB61AEBB176CD3DD00C7306E /* Foundation.framework */,
 				AB61AEBD176CD3DD00C7306E /* CoreGraphics.framework */,
 				AB61AEBF176CD3DD00C7306E /* UIKit.framework */,
@@ -136,6 +150,7 @@
 		AB61AEC2176CD3DD00C7306E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AB61AEF6176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 */,
 				AB61AEC3176CD3DD00C7306E /* SpeakerMesh-Info.plist */,
 				AB61AEC4176CD3DD00C7306E /* InfoPlist.strings */,
 				AB61AEC7176CD3DD00C7306E /* main.m */,
@@ -210,6 +225,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = HackDayTeamAwesome;
 				TargetAttributes = {
+					AB61AEB7176CD3DD00C7306E = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					AB61AED8176CD3DD00C7306E = {
 						TestTargetID = AB61AEB7176CD3DD00C7306E;
 					};
@@ -239,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB61AEF7176CDDFF00C7306E /* 04 - Johnny Cash - Folsom Prison Blues [Live].mp3 in Resources */,
 				AB61AED4176CD3DD00C7306E /* Images.xcassets in Resources */,
 				AB61AEC6176CD3DD00C7306E /* InfoPlist.strings in Resources */,
 				AB61AECF176CD3DD00C7306E /* Main.storyboard in Resources */,

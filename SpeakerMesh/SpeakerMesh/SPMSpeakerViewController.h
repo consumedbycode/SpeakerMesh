@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface SPMSpeakerViewController : UIViewController
+@interface SPMSpeakerViewController : UIViewController <AVAudioPlayerDelegate>
 
 @end
