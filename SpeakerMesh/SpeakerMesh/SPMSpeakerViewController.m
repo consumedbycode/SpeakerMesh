@@ -9,6 +9,7 @@
 #import "SPMSpeakerViewController.h"
 #import "AFJSONRequestOperation.h"
 #import "Constants.h"
+#import "AFHTTPClient.h"
 
 @interface SPMSpeakerViewController()
 
@@ -90,17 +91,15 @@
      JSONRequestOperationWithRequest:request
      success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
          NSLog(@"Got speaker ID for server");
-         _speakerId = (NSNumber *)JSON[@"newId"];
-         
-         
-         
-         
+         [self broadcastWithId:(NSNumber *)JSON[@"newId"]];
      } failure:nil];
     [operation start];
 }
 
-- (void) broadcastWithId
+- (void) broadcastWithId:(NSNumber *)serverAssignedId
 {
+    _speakerId = serverAssignedId;
+    
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                      major:[_speakerId shortValue]
@@ -128,12 +127,42 @@
 - (void) stopBroadcasting
 {
     [_peripheralManager stopAdvertising];
+    [_serverPollTimer invalidate];
+    
     self.broadcastingStatusLabel.text = @"Broadcast stopped.";
+    NSLog(@"Removing from server");
+    
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/removeSpeakerId"];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @"id", _speakerId,
+                            nil];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation
+     JSONRequestOperationWithRequest:request
+     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+         NSLog(@"Removed myself from the server");
+     } failure:nil];
+    [operation start];
 }
 
 - (void)updateServer:(NSTimeInterval)interval
 {
-    
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/setCurrentPlayOffset"];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            @"id", _speakerId,
+                            @"offset", _appSoundPlayer.currentTime,
+                            nil];
+    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation
+     JSONRequestOperationWithRequest:request
+     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+         NSLog(@"Updated playback time on server");
+     } failure:nil];
+    [operation start];
 }
 
 - (void)pollServer:(NSTimeInterval)interval
