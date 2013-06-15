@@ -29,20 +29,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-
+    
     _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
-
+    
     UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.statusLabel]];
     gravityBehavior.yComponent = 3;
-
+    
     UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.statusLabel]];
     collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
-
+    
     [_animator addBehavior:gravityBehavior];
     [_animator addBehavior:collisionBehavior];
-
+    
     collisionBehavior.collisionDelegate = self;
 }
 
@@ -51,8 +49,10 @@
     [super viewDidAppear:animated];
     self.recentBeacons = [[NSArray alloc] init];
     
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
-    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"com.hackday.speakermesh"];
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
     
     
@@ -110,7 +110,7 @@
          NSLog(@"Updated server with beacons");
      }
      failure:^(NSURLRequest *request, NSHTTPURLResponse *operation, NSError *error, id JSON) {
-        NSLog(@"Error updating server");
+         NSLog(@"Error updating server");
      }];
     [operation start];
 }
