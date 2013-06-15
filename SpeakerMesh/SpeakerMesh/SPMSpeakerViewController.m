@@ -1,0 +1,38 @@
+//
+//  SPMSpeakerViewController.m
+//  SpeakerMesh
+//
+//  Created by Jonathan Graves on 6/15/13.
+//  Copyright (c) 2013 HackDayTeamAwesome. All rights reserved.
+//
+
+#import "SPMSpeakerViewController.h"
+
+@interface SPMSpeakerViewController ()
+
+@end
+
+@implementation SPMSpeakerViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

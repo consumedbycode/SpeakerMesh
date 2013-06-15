@@ -1,5 +1,5 @@
 //
-//  SPMViewController.h
+//  SPMClientViewController.h
 //  SpeakerMesh
 //
 //  Created by Jonathan Graves on 6/15/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SPMViewController : UIViewController
+@interface SPMClientViewController : UIViewController
 
 @end

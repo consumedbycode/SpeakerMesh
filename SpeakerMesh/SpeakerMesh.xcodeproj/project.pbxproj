@@ -14,13 +14,15 @@
 		AB61AEC8176CD3DD00C7306E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEC7176CD3DD00C7306E /* main.m */; };
 		AB61AECC176CD3DD00C7306E /* SPMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */; };
 		AB61AECF176CD3DD00C7306E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB61AECD176CD3DD00C7306E /* Main.storyboard */; };
-		AB61AED2176CD3DD00C7306E /* SPMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AED1176CD3DD00C7306E /* SPMViewController.m */; };
+		AB61AED2176CD3DD00C7306E /* SPMMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */; };
 		AB61AED4176CD3DD00C7306E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB61AED3176CD3DD00C7306E /* Images.xcassets */; };
 		AB61AEDB176CD3DD00C7306E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEDA176CD3DD00C7306E /* XCTest.framework */; };
 		AB61AEDC176CD3DD00C7306E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBB176CD3DD00C7306E /* Foundation.framework */; };
 		AB61AEDD176CD3DD00C7306E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB61AEBF176CD3DD00C7306E /* UIKit.framework */; };
 		AB61AEE5176CD3DD00C7306E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB61AEE3176CD3DD00C7306E /* InfoPlist.strings */; };
 		AB61AEE7176CD3DD00C7306E /* SpeakerMeshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */; };
+		AB61AEF4176CDD2400C7306E /* SPMSpeakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */; };
+		AB61AEF5176CDD3D00C7306E /* SPMClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		AB61AECA176CD3DD00C7306E /* SPMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMAppDelegate.h; sourceTree = "<group>"; };
 		AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMAppDelegate.m; sourceTree = "<group>"; };
 		AB61AECE176CD3DD00C7306E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AB61AED0176CD3DD00C7306E /* SPMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMViewController.h; sourceTree = "<group>"; };
-		AB61AED1176CD3DD00C7306E /* SPMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMViewController.m; sourceTree = "<group>"; };
+		AB61AED0176CD3DD00C7306E /* SPMMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMMainViewController.h; sourceTree = "<group>"; };
+		AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMMainViewController.m; sourceTree = "<group>"; };
 		AB61AED3176CD3DD00C7306E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AB61AED9176CD3DD00C7306E /* SpeakerMeshTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeakerMeshTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB61AEDA176CD3DD00C7306E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AB61AEE2176CD3DD00C7306E /* SpeakerMeshTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpeakerMeshTests-Info.plist"; sourceTree = "<group>"; };
 		AB61AEE4176CD3DD00C7306E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB61AEE6176CD3DD00C7306E /* SpeakerMeshTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakerMeshTests.m; sourceTree = "<group>"; };
+		AB61AEF0176CDB5700C7306E /* SPMClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMClientViewController.h; sourceTree = "<group>"; };
+		AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMClientViewController.m; sourceTree = "<group>"; };
+		AB61AEF2176CDB7B00C7306E /* SPMSpeakerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPMSpeakerViewController.h; sourceTree = "<group>"; };
+		AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMSpeakerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +121,14 @@
 				AB61AECA176CD3DD00C7306E /* SPMAppDelegate.h */,
 				AB61AECB176CD3DD00C7306E /* SPMAppDelegate.m */,
 				AB61AECD176CD3DD00C7306E /* Main.storyboard */,
-				AB61AED0176CD3DD00C7306E /* SPMViewController.h */,
-				AB61AED1176CD3DD00C7306E /* SPMViewController.m */,
+				AB61AED0176CD3DD00C7306E /* SPMMainViewController.h */,
+				AB61AED1176CD3DD00C7306E /* SPMMainViewController.m */,
+				AB61AEF2176CDB7B00C7306E /* SPMSpeakerViewController.h */,
+				AB61AEF3176CDB7B00C7306E /* SPMSpeakerViewController.m */,
 				AB61AED3176CD3DD00C7306E /* Images.xcassets */,
 				AB61AEC2176CD3DD00C7306E /* Supporting Files */,
+				AB61AEF0176CDB5700C7306E /* SPMClientViewController.h */,
+				AB61AEF1176CDB5700C7306E /* SPMClientViewController.m */,
 			);
 			path = SpeakerMesh;
 			sourceTree = "<group>";
@@ -250,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB61AED2176CD3DD00C7306E /* SPMViewController.m in Sources */,
+				AB61AED2176CD3DD00C7306E /* SPMMainViewController.m in Sources */,
 				AB61AEC8176CD3DD00C7306E /* main.m in Sources */,
 				AB61AECC176CD3DD00C7306E /* SPMAppDelegate.m in Sources */,
+				AB61AEF5176CDD3D00C7306E /* SPMClientViewController.m in Sources */,
+				AB61AEF4176CDD2400C7306E /* SPMSpeakerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

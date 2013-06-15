@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 HackDayTeamAwesome. All rights reserved.
 //
 
-#import "SPMViewController.h"
+#import "SPMMainViewController.h"
 
-@interface SPMViewController ()
+@interface SPMMainViewController ()
 
 @end
 
-@implementation SPMViewController
+@implementation SPMMainViewController
 
 - (void)viewDidLoad
 {
