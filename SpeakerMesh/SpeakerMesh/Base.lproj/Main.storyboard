@@ -67,18 +67,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kkb-1k-ljb">
-                                <rect key="frame" x="0.0" y="48" width="320" height="456"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="Eqc-bR-uiH"/>
                     <connections>
-                        <outlet property="locatedSpeakersTableView" destination="Kkb-1k-ljb" id="Sbr-Xg-HVz"/>
                         <outlet property="statusLabel" destination="Wb4-DN-83X" id="kxJ-td-sHF"/>
                     </connections>
                 </viewController>
@@ -141,6 +135,25 @@
             <point key="canvasLocation" x="29" y="531"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="SPMClientViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPMClientViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="locatedSpeakersTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="statusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="SPMMainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPMMainViewController.h"/>
+        </class>
+        <class className="SPMSpeakerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPMSpeakerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="broadcastingStatusLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="playingStatusLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

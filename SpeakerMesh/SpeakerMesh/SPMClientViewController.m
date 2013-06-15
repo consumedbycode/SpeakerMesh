@@ -16,6 +16,7 @@
 @implementation SPMClientViewController {
     CLLocationManager *_locationManager;
     CLBeaconRegion *_beaconRegion;
+    UIDynamicAnimator *_animator;
 }
 
 - (void)viewDidLoad
@@ -23,11 +24,19 @@
     [super viewDidLoad];
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
-    self.locatedSpeakersTableView.delegate = self;
 
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
     _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
+
+    _animator = [[UIDynamicAnimator alloc]initWithReferenceView:self.view];
+    UIGravityBehavior* gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[self.statusLabel]];
+    UICollisionBehavior* collisionBehavior = [[UICollisionBehavior alloc] initWithItems:@[self.statusLabel]];
+    collisionBehavior.translatesReferenceBoundsIntoBoundary = YES;
+    [_animator addBehavior:gravityBehavior];
+    [_animator addBehavior:collisionBehavior];
+    
+    collisionBehavior.collisionDelegate = self;
 }
 
 - (void) viewDidDisappear:(BOOL)animated
@@ -39,10 +48,9 @@
 
 - (void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"found beacons" message:[NSString stringWithFormat:@"%i beacon(s) found.", beacons.count] delegate:self cancelButtonTitle:@"Sah-weet!" otherButtonTitles:nil];
-    [errorAlert show];
-    return;
-
+    for(CLBeacon *beacon in beacons) {
+        
+    }
 }
 
 @end
