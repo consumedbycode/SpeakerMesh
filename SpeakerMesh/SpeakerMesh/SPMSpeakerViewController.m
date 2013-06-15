@@ -16,6 +16,7 @@
 
     AVAudioPlayer *_appSoundPlayer;
     CBPeripheralManager *_peripheralManager;
+    NSTimer *_serverPollTimer;
 }
 
 - (void)viewDidLoad
@@ -31,11 +32,15 @@
     [_appSoundPlayer prepareToPlay];
     [_appSoundPlayer setVolume: 1.0];
     [_appSoundPlayer setDelegate: self];
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     [self startPlaying];
     [self startBroadcasting];
 }
-
 
 - (void) viewWillDisappear:(BOOL)animated
 {
@@ -43,7 +48,7 @@
     _appSoundPlayer = nil;
     [self stopBroadcasting];
     _peripheralManager = nil;
-
+    [_serverPollTimer invalidate];
 }
 
 - (void) startPlaying
@@ -73,6 +78,13 @@
     {
         [_peripheralManager startAdvertising:peripheralData];
         self.broadcastingStatusLabel.text = @"Broadcasting...";
+        
+        
+        _serverPollTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                            target:self
+                                                          selector:@selector(pollServer:)
+                                                          userInfo:nil
+                                                           repeats:YES];
     }
     else
     {
@@ -84,6 +96,11 @@
 {
     [_peripheralManager stopAdvertising];
     self.broadcastingStatusLabel.text = @"Broadcast stopped.";
+}
+
+- (void)pollServer:(NSTimeInterval)interval {
+    
+    
 }
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral

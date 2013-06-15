@@ -9,7 +9,6 @@
 #ifndef SpeakerMesh_Constants_h
 #define SpeakerMesh_Constants_h
 
-
-static NSUUID *DefaultUUID = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"];
+static NSString *DefaultUUID = @"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0";
 
 #endif

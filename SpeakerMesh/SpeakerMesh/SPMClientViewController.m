@@ -25,7 +25,8 @@
     _locationManager.delegate = self;
     self.locatedSpeakersTableView.delegate = self;
 
-    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:DefaultUUID identifier:[DefaultUUID UUIDString]];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
 }
 
