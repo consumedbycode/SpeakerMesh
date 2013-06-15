@@ -1,0 +1,31 @@
+GET
+http://curtisherbert.com/hack/getMeshStatus?beaconId=61828000-d5dc-11e2-8b8b-0800200c9a66
+Result:
+{
+	"shouldPlay": true,
+	"offset": "1",
+	"accuracy": "1",
+	"proximity": "TEST"
+}
+
+POST
+http://curtisherbert.com/hack/setCurrentStatus
+Post Variable "knownSpeakers"
+[
+	{
+		"UUID": "61828000-d5dc-11e2-8b8b-0800200c9a66",
+		"accuracy": 0.15,
+		"proximity": "TEST!"
+	},
+	{
+		"UUID": "71828000-d5dc-11e2-8b8b-0800200c9a66",
+		"accuracy": 1.15,
+		"proximity": "TEST!"
+	}
+]
+Post Variable "shouldBePlaying" : true
+
+POST
+http://curtisherbert.com/hack/setCurrentPlayOffset
+Post Variable "UUID": "61828000-d5dc-11e2-8b8b-0800200c9a66"
+Post Variable "offset" : 32
