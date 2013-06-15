@@ -7,6 +7,7 @@
 //
 
 #import "SPMSpeakerViewController.h"
+#import "AFJSONRequestOperation.h"
 
 @interface SPMSpeakerViewController()
 
@@ -17,6 +18,8 @@
     AVAudioPlayer *_appSoundPlayer;
     CBPeripheralManager *_peripheralManager;
     NSTimer *_serverPollTimer;
+    NSTimer *_serverUpdateTimer;
+    NSNumber *_speakerId;
 }
 
 - (void)viewDidLoad
@@ -38,7 +41,6 @@
 {
     [super viewDidAppear:animated];
     
-    [self startPlaying];
     [self startBroadcasting];
 }
 
@@ -49,17 +51,25 @@
     [self stopBroadcasting];
     _peripheralManager = nil;
     [_serverPollTimer invalidate];
+    [_serverUpdateTimer invalidate];
 }
 
-- (void) startPlaying
+- (void) startPlayingAtTime:(int)offset
 {
-    [_appSoundPlayer play];
-    self.playingStatusLabel.text = @"Playing...";
+    [_appSoundPlayer playAtTime:offset];
+    self.playingStatusLabel.text = @"Playing at offset...";
+    
+    _serverUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                        target:self
+                                                      selector:@selector(updateServer:)
+                                                      userInfo:nil
+                                                       repeats:YES];
 }
 
 - (void) stopPlaying
 {
     [_appSoundPlayer stop];
+    [_serverUpdateTimer invalidate];
     self.playingStatusLabel.text = @"Stopped.";
 }
 
@@ -72,8 +82,29 @@
         return;
     }
 
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID] identifier:@"com.hackday.speakermesh"];
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/getSpeakerId"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation
+     JSONRequestOperationWithRequest:request
+     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+         NSLog(@"Got speaker ID for server");
+         _speakerId = (NSNumber *)JSON[@"newId"];
+         
+         
+         
+         
+     } failure:nil];
+    [operation start];
+}
+
+- (void) broadcastWithId
+{
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[NSUUID UUID]
+                                                                     major:[_speakerId shortValue]
+                                                                identifier:@"com.hackday.speakermesh"];
     NSDictionary *peripheralData = [region peripheralDataWithMeasuredPower:@-59];
+     
     if (peripheralData)
     {
         [_peripheralManager startAdvertising:peripheralData];
@@ -98,9 +129,37 @@
     self.broadcastingStatusLabel.text = @"Broadcast stopped.";
 }
 
-- (void)pollServer:(NSTimeInterval)interval {
+- (void)updateServer:(NSTimeInterval)interval
+{
     
-    
+}
+
+- (void)pollServer:(NSTimeInterval)interval
+{
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://curtisherbert.com/hack/getMeshStatus?beaconId%i", _speakerId.intValue]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    AFJSONRequestOperation *operation =
+        [AFJSONRequestOperation
+             JSONRequestOperationWithRequest:request
+             success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                 NSLog(@"Got server status for spakers");
+                 BOOL shouldPlay = (BOOL)JSON[@"shouldPlay"];
+                 int offset = ((NSNumber *)JSON[@"offset"]).intValue;
+                 int accuracy = ((NSNumber *)JSON[@"accuracy"]).doubleValue;
+                 BOOL isPlaying = _appSoundPlayer.playing;
+                 
+                 if (shouldPlay && !isPlaying) {
+                     [self startPlayingAtTime:offset];
+                 } else if (!shouldPlay && isPlaying) {
+                     [self stopPlaying];
+                 }
+                 
+                 if (shouldPlay) {
+                     //TODO deal with volume
+                 }
+                  
+             } failure:nil];
+    [operation start];    
 }
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
