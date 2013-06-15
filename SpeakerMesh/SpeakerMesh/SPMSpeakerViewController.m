@@ -58,7 +58,11 @@
 
 - (void) startPlayingAtTime:(int)offset
 {
-    [_appSoundPlayer playAtTime:offset];
+    if (offset > 0) {
+        [_appSoundPlayer playAtTime:offset];
+    } else {
+        [_appSoundPlayer play];
+    }
     self.playingStatusLabel.text = @"Playing at offset...";
     
     _serverUpdateTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
@@ -153,7 +157,7 @@
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             @"id", _speakerId,
-                            @"offset", _appSoundPlayer.currentTime,
+                            @"offset", @(_appSoundPlayer.currentTime),
                             nil];
     NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
     AFJSONRequestOperation *operation =
@@ -167,14 +171,14 @@
 
 - (void)pollServer:(NSTimeInterval)interval
 {
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://curtisherbert.com/hack/getMeshStatus?beaconId%i", _speakerId.intValue]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://curtisherbert.com/hack/getMeshStatus?beaconId=%i", _speakerId.intValue]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation =
         [AFJSONRequestOperation
              JSONRequestOperationWithRequest:request
              success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                  NSLog(@"Got server status for spakers");
-                 BOOL shouldPlay = (BOOL)JSON[@"shouldPlay"];
+                 BOOL shouldPlay = ((NSNumber *)JSON[@"shouldBePlaying"]).boolValue;
                  int offset = ((NSNumber *)JSON[@"offset"]).intValue;
                  int accuracy = ((NSNumber *)JSON[@"accuracy"]).doubleValue;
                  BOOL isPlaying = _appSoundPlayer.playing;
