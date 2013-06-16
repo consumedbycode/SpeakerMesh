@@ -52,7 +52,7 @@
     _locationManager = [[CLLocationManager alloc] init];
     _locationManager.delegate = self;
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
-    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:@"com.hackday.speakermesh"];
+    _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:[uuid UUIDString]];
     [_locationManager startRangingBeaconsInRegion:_beaconRegion];
     
     
@@ -95,24 +95,20 @@
         [beaconsForServer addObject:beaconForServer];
     }
     
-    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/setCurrentStatus"];
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-    httpClient.parameterEncoding = AFJSONParameterEncoding;
+    [httpClient setParameterEncoding:AFJSONParameterEncoding];
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            [NSNumber numberWithBool:_isPlaying], @"shouldBePlaying",
                             beaconsForServer, @"knownSpeakers",
+                            [NSNumber numberWithBool:_isPlaying], @"shouldBePlaying",
                             nil];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
-    AFJSONRequestOperation *operation =
-    [AFJSONRequestOperation
-     JSONRequestOperationWithRequest:request
-     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-         NSLog(@"Updated server with beacons");
-     }
-     failure:^(NSURLRequest *request, NSHTTPURLResponse *operation, NSError *error, id JSON) {
-         NSLog(@"Error updating server");
-     }];
-    [operation start];
+    [httpClient postPath:@"/hack/setCurrentStatus"
+              parameters:params
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     NSLog(@"Updated the server with beacons");
+                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+                 }];
 }
 
 - (IBAction)performPlayPause:(id)sender

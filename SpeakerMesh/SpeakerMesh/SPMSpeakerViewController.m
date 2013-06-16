@@ -56,7 +56,7 @@
     [_serverUpdateTimer invalidate];
 }
 
-- (void) startPlayingAtTime:(int)offset
+- (void) startPlayingAtTime:(double)offset
 {
     if (offset > 0) {
         [_appSoundPlayer playAtTime:offset];
@@ -107,7 +107,7 @@
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:DefaultUUID];
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                      major:[_speakerId shortValue]
-                                                                identifier:@"com.hackday.speakermesh"];
+                                                                identifier:[uuid UUIDString]];
     NSDictionary *peripheralData = [region peripheralDataWithMeasuredPower:@-59];
      
     if (peripheralData)
@@ -136,37 +136,37 @@
     self.broadcastingStatusLabel.text = @"Broadcast stopped.";
     NSLog(@"Removing from server");
     
-    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/removeSpeakerId"];
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"id", _speakerId,
+                            _speakerId, @"id",
                             nil];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
-    AFJSONRequestOperation *operation =
-    [AFJSONRequestOperation
-     JSONRequestOperationWithRequest:request
-     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-         NSLog(@"Removed myself from the server");
-     } failure:nil];
-    [operation start];
+    [httpClient postPath:@"/hack/removeSpeakerId"
+              parameters:params
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     NSLog(@"Removed myself from the server");
+                 } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                     NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+                 }];
 }
 
 - (void)updateServer:(NSTimeInterval)interval
 {
-    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/hack/setCurrentPlayOffset"];
+    NSURL *url = [NSURL URLWithString:@"http://curtisherbert.com/"];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+    
     NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            @"id", _speakerId,
-                            @"offset", @(_appSoundPlayer.currentTime),
+                            _speakerId, @"id",
+                            @(_appSoundPlayer.currentTime), @"offset",
                             nil];
-    NSMutableURLRequest *request = [httpClient requestWithMethod:@"POST" path:nil parameters:params];
-    AFJSONRequestOperation *operation =
-    [AFJSONRequestOperation
-     JSONRequestOperationWithRequest:request
-     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-         NSLog(@"Updated playback time on server");
-     } failure:nil];
-    [operation start];
+    [httpClient postPath:@"/hack/setCurrentPlayOffset"
+              parameters:params
+                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                     NSLog(@"Updated playback time on server");
+                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                    NSLog(@"[HTTPClient Error]: %@", error.localizedDescription);
+                }];
 }
 
 - (void)pollServer:(NSTimeInterval)interval
@@ -179,8 +179,8 @@
              success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                  NSLog(@"Got server status for spakers");
                  BOOL shouldPlay = ((NSNumber *)JSON[@"shouldBePlaying"]).boolValue;
-                 int offset = ((NSNumber *)JSON[@"offset"]).intValue;
-                 int accuracy = ((NSNumber *)JSON[@"accuracy"]).doubleValue;
+                 double offset = ((NSNumber *)JSON[@"offset"]).doubleValue;
+                 double accuracy = ((NSNumber *)JSON[@"accuracy"]).doubleValue;
                  BOOL isPlaying = _appSoundPlayer.playing;
                  
                  if (shouldPlay && !isPlaying) {
